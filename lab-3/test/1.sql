@@ -1,0 +1,1 @@
+SELECT c_acctbal, c_phone, c_address from customer WHERE c_name = 'Customer#000000020';

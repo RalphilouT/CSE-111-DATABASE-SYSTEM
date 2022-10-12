@@ -1,0 +1,1 @@
+SELECT c_mktsegment, sum(c_acctbal) from customer GROUP BY c_mktsegment;
