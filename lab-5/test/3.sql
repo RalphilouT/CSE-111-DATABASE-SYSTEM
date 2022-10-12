@@ -1,0 +1,2 @@
+SELECT min(l_discount) as minDIS FROM (SELECT avg(l_discount) as DISCOUNT FROM lineitem)E1, orders o1, lineitem l1
+WHERE substr(o_orderdate,1,7) = '1996-10' AND o1.o_orderkey = l1.l_orderkey AND E1.DISCOUNT < l1.l_discount; 

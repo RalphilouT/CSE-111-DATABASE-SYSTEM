@@ -1,0 +1,2 @@
+SELECT DISTINCT p_name FROM lineitem l1, part p1, (SELECT min(l2.l_extendedprice * (1- l2.l_discount))as lowestValLineItem, l2.l_partkey FROM lineitem l2)E1
+WHERE l1.l_partkey = p1.p_partkey AND l_shipdate > '1996-10-2' AND E1.l_partkey = l1.l_partkey;
